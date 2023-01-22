@@ -23,12 +23,12 @@
 
 html{
   scroll-behavior: smooth;
+  min-width: 320px
 }
 body {
   font-family: "Roboto", sans-serif;
   color: var(--navy-blue);
   background-color: #ffff;
-  min-width: min-content;
 }
 .list{
   list-style: none;               /* стиль усіх списків без маркерів */
@@ -124,14 +124,7 @@ h1, h2, h3, h4, p {
     cursor: pointer;
     transition: stroke var(--transition);
   }
-  /* .mobile-menu-open-button:hover .mobile-menu-open-icon{
-    stroke: var(--ocean);
-  }
-  .mobile-menu-open-button:focus .mobile-menu-open-icon{
-    stroke: var(--ocean);
-  } */
-
-
+  
   .mobile-menu-container{
     position: fixed;
     top: 0;
@@ -211,6 +204,9 @@ h1, h2, h3, h4, p {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--navy-blue);
+  }
+  .current{
+    color: var(--ocean);
   }
   .mobile-menu-item:hover .link,
   .mobile-menu-item:focus .link{
@@ -327,7 +323,7 @@ h1, h2, h3, h4, p {
     padding-bottom: 112px;
   }
   .hero-title {
-    width: 318px;
+    /* width: 318px; */
     margin-bottom: 72px;
     text-align: center;
     font-weight: 700;
@@ -335,8 +331,9 @@ h1, h2, h3, h4, p {
     line-height: 1.11;
     letter-spacing: 0.019em;
     text-transform: capitalize;
-    color: var(--herotext-color);    
+    color: var(--herotext-color);   
   }
+
   .hero-button {
     /* display: block; */
     padding: 16px 32px;
@@ -400,7 +397,6 @@ h1, h2, h3, h4, p {
   .ourteam-section {
     padding-top: 96px;
     padding-bottom: 104px;
-    margin-bottom: 96px;
     background-color: var(--cloud);
   }
   .ourteam-title {
@@ -476,7 +472,8 @@ h1, h2, h3, h4, p {
 
   /*---Styles: Main Content -> section "Customers" */
   .customers-section{
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .customers-list{
     display: flex;
@@ -493,7 +490,6 @@ h1, h2, h3, h4, p {
     letter-spacing: 0.02em;
   }
   .customers-list-item{
-    /* width: 190px; */
     width: calc((100% - 16px) / 2);
     height: 88px;
   }
@@ -501,6 +497,7 @@ h1, h2, h3, h4, p {
     display: flex; 
     width: 100%;
     height: 100%; 
+    padding: 16px 40px;
     border: 1px solid var(--light-slate);
     border-radius: 4px;
     transition: border-color var(--transition);
@@ -512,20 +509,14 @@ h1, h2, h3, h4, p {
     border-color: var(--ocean);
   }
   .customer-logo-svg{
-    width: 110px;
-    height: 56px;
-    margin: auto;
     fill: var(--light-slate);
-    stroke: var(--light-slate);
-    transition: fill var(--transition), stroke var(--transition);
+    transition: fill var(--transition)
   }
   .customers-list-item-link:hover .customer-logo-svg{
     fill: var(--ocean);
-    stroke: var(--ocean);
   }
   .customers-list-item-link:focus .customer-logo-svg{
     fill: var(--ocean);
-    stroke: var(--ocean);
   }
 
   /*---Styles: Footer */
@@ -683,7 +674,7 @@ h1, h2, h3, h4, p {
     visibility: hidden;
     pointer-events: none;
   }
-    .modal{
+  .modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -884,7 +875,16 @@ h1, h2, h3, h4, p {
       transform: translateX(-50%);
     }
   }
-  
+  @media screen and (max-width: 427.98px){
+    .mobile-menu-contacts-item:first-child .link{
+      font-size: 25px;  
+    }
+  }
+  @media screen and (max-width: 350px){
+    .hero-title{
+      font-size: 32px;
+    }
+  }
 
   /*------------Styles: Portfolio page-----------------*/
   .portfolio-section{
@@ -1161,22 +1161,23 @@ h1, h2, h3, h4, p {
       .footer .container{
         display: flex;
         flex-wrap: wrap;
-        padding-left: 108px;
-        padding-right: 164px;
+        width: 528px;
         justify-content: space-between;
       }
       .logo-and-slogan{
         width: 264px;
         margin: 0px 24px 72px 0px;
       }
+      .logo-word-footer, 
+      .social-media-footer-title, 
+      .footer-email-label-caption{
+        text-align: left;
+      }
       .social-media{
           margin-bottom: 0;
       }
       .subscribe-buttons-block{
         display: flex;
-      }
-      .footer-email-label-caption{
-        text-align: left;
       }
       .footer-email-input{
         width: 264px;
@@ -1407,7 +1408,6 @@ h1, h2, h3, h4, p {
         /*---Styles: Main Content -> section "What we are doing" */
         .whatwearedoing-section{
           display: block;
-          margin-bottom: 120px;
         }
         .whatwearedoing-title {
           margin-bottom: 72px;
@@ -1426,7 +1426,6 @@ h1, h2, h3, h4, p {
         .ourteam-section {
           padding-top: 120px;
           padding-bottom: 120px;
-          margin-bottom: 120px;  
         }
         .ourteam-list {
           flex-wrap: nowrap;
@@ -1434,11 +1433,12 @@ h1, h2, h3, h4, p {
         
         /*---Styles: Main Content -> section "Customers" */
         .customers-section{
-          margin-bottom: 120px;
+          padding-top: 120px;
+          padding-bottom: 120px;
         }
-        .customers-list{
+        /* .customers-list{
           flex-wrap: nowrap;
-        }
+        } */
     
       
         /*---Styles: Footer */
@@ -1447,10 +1447,12 @@ h1, h2, h3, h4, p {
             padding-bottom: 100px;
         }
         .footer .container{
-            flex-wrap: nowrap;
+            /* flex-wrap: nowrap; */
             padding: 0 16px;
+            width: unset;
         }
         .logo-and-slogan{
+          margin-bottom: 0px;
           margin-right: 120px;
         }
         .social-media{
