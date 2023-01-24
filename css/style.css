@@ -490,14 +490,15 @@ h1, h2, h3, h4, p {
     letter-spacing: 0.02em;
   }
   .customers-list-item{
-    width: calc((100% - 16px) / 2);
+    width: 190px;
     height: 88px;
   }
   .customers-list-item-link{
     display: flex; 
     width: 100%;
-    height: 100%; 
-    padding: 16px 40px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--light-slate);
     border-radius: 4px;
     transition: border-color var(--transition);
@@ -509,6 +510,8 @@ h1, h2, h3, h4, p {
     border-color: var(--ocean);
   }
   .customer-logo-svg{
+    width: 110px;
+    height: 56px;
     fill: var(--light-slate);
     transition: fill var(--transition)
   }
@@ -678,7 +681,7 @@ h1, h2, h3, h4, p {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 392px;
+    width: calc(100% - 30px);
     padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
@@ -878,6 +881,9 @@ h1, h2, h3, h4, p {
   @media screen and (max-width: 427.98px){
     .mobile-menu-contacts-item:first-child .link{
       font-size: 25px;  
+    }
+    .customers-list-item{
+      width: calc((100% - 16px)/2);
     }
   }
   @media screen and (max-width: 350px){
