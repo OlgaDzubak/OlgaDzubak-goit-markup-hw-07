@@ -677,8 +677,11 @@
     </script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/phone-mask.js"></script>
-
+    <script 
+            var element = document.getElementById('phone');
+            var maskOptions = {mask: '+7(000)000-00-00', lazy: false} 
+            var mask = new IMask(element, maskOptions);
+    </script>
   </body>
 
 </html>
