@@ -611,15 +611,15 @@
             </span>
           </label>
 
-          <label class="modal-form-label">
+          <label for="phone" class="modal-form-label">
             <span class="label-caption">Phone</span>
             <span class="input-and-icon-spanblock">
               <input
                 class="input"
                 type="tel" 
                 name="phone" 
-                placeholder="+38(0__)___-__-__"
-                pattern="/^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/"
+                id="phone"  
+                placeholder="+38(000)000-00-00"
                 title="+38(xxx)xxx-xx-xx"
                 required 
               >
@@ -678,6 +678,7 @@
     </script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/phone-mask.js"></script>
 
   </body>
 
